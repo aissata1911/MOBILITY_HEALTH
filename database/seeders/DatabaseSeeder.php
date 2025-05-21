@@ -1073,3 +1073,25 @@ class DatabaseSeeder extends Seeder
 
 
 }
+
+
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+
+class DatabaseSeeder extends Seeder
+{
+    /**
+     * Seed the application's database.
+     */
+    public function run(): void
+    {
+        $this->call([
+            SinistreSeeder::class,
+            PrestationSeeder::class,
+            OrdonnanceSeeder::class,
+        ]);
+    }
+}
+
